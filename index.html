@@ -17,6 +17,7 @@
 </head>
 
 <body>
+	<script type="module" src="./assets/script.js"></script>
 	<header>
 		<div id="editionMode">
 		<i class="fa-regular fa-pen-to-square"></i>
@@ -65,9 +66,13 @@
 						</div>					
 						<form id="addPhotoForm">
 							<h2>Ajout photo</h2>
+							<div class="image-container">
+							<img id="imagePreview">
 							<input type="file" id="photoInput" accept="image/*">
+						</div>
 							<p>Titre</p>
-							<input type="text" id="photoTilte" placeholder="">
+						
+							<input type="text" id="photoTitle" placeholder="">
 							
 							<p>Catégories</p>
 						    <select id="photoCategory"></select>					
@@ -91,6 +96,7 @@
 				<label for="message">Message</label>
 				<textarea name="message" id="message" cols="30" rows="10"></textarea>
 				<input type="submit" value="Envoyer">
+				
 			</form>
 		</section>
 	</main>
@@ -102,7 +108,7 @@
 			</ul>
 		</nav>
 	</footer>
-	<script src="./assets/script.js"></script>
+	
 </body>
 
 </html>
