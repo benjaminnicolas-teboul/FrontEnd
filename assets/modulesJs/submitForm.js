@@ -1,5 +1,6 @@
 export 
 async function submitForm() {
+  
   const formData = new FormData();
   const previewImage = document.querySelector("#imagePreview");
   const categoryValue = document.querySelector("#photoCategory").value;
