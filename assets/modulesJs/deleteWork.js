@@ -1,5 +1,5 @@
 import {fetchWorks} from "./fetchWorks.js";
-
+import {closeModal} from "./closeModal.js";
 export const deleteWork = async (id) => {
     const storedToken = sessionStorage.getItem("token");
     const parsedToken = JSON.parse(storedToken);

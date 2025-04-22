@@ -17,6 +17,7 @@
 </head>
 
 <body>
+	
 	<script type="module" src="./assets/script.js"></script>
 	<header>
 		<div id="editionMode">
@@ -36,6 +37,7 @@
 	</div>
 	</header>
 	<main>
+		<div class="main-container">
 		<section id="introduction">
 			<figure>
 				<img src="./assets/images/sophie-bluel.png" alt="">
@@ -52,10 +54,10 @@
 			</article>
 		</section>
 		<section id="portfolio">
-
+			<div class="align-horizontal">
 			<h2>Mes Projets</h2>
 			<a class="buttonModify" href="#modal1"><i class="fa-regular fa-pen-to-square"></i> modifier</a>
-
+			</div>
 			<aside id="modal1" class="modal">
 				<div class="modal-content">
 					<div id="modal-header">
@@ -68,14 +70,20 @@
 							<h2>Ajout photo</h2>
 							<div class="image-container">
 							<img id="imagePreview" src="" >
+							<i class="fa-regular fa-image" style="color: #000000;"></i>
 							<input type="file" id="photoInput" accept="image/*">
-						</div>
+							<label for="photoInput">
+								<span>+ Ajouter photo</span>
+								<input type="file" id="photoInput" name="image" accept="image/*"/>
+							  </label>
+							  
+						    </div>
 							<p>Titre</p>
 						
-							<input type="text" id="photoTitle" placeholder="">
+							<input type="text" name="phototitle" id="photoTitle" placeholder="">
 							
 							<p>Catégories</p>
-						    <select id="photoCategory"></select>					
+						    <select id="photoCategory" name="categoryid"></select>					
 							<button id="submitPhotoBtn">Valider</button>
 						</form>
 						<button id="add-image">Ajouter une photo</button>
@@ -108,7 +116,8 @@
 			</ul>
 		</nav>
 	</footer>
-	
+
+</div>
 </body>
 
 </html>

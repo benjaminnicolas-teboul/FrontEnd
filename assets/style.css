@@ -133,7 +133,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+.main-container{
+	padding: 50px;
+}
 /** end reset css**/
 body {
 	max-width: 1140px;
@@ -229,7 +231,11 @@ li:hover {
 	text-align: center;
 	margin-bottom: 1em;
 }
-
+a {
+	color: #000;          
+	text-decoration: none; 
+  }
+  
 .gallery {
 	width: 100%;
 	display: grid;
@@ -317,7 +323,7 @@ footer nav ul {
 	margin: 2em
 }
 
-#login h1 {
+#login h2 {
 	color: #1D6154;
 	text-align: center;
 	margin-bottom: 50px;
@@ -334,6 +340,11 @@ footer nav ul {
 	width: 35%;
 	margin: auto;
 }
+
+	#login  a{
+		width: 50%;
+		margin: auto;
+	}
 
 #login input[type="email"] {
 	height: 50px;
@@ -412,7 +423,13 @@ footer nav ul {
 	width: 100%;
 	height: 100%;
 }
-
+.align-horizontal{
+display: flex;
+  justify-content: space-between;
+}
+#portfolio .align-horizontal{
+	justify-content: center;
+}
 #add-image {
 
 	background-color: #1D6154;
@@ -459,7 +476,7 @@ footer nav ul {
 
 #addPhotoForm {
 
-	
+	width:50%;
 	display: none;
 
 }
@@ -475,7 +492,38 @@ footer nav ul {
 	width: 100%;
 }
 #imagePreview{
-	width: 75%;
+	width: 100%;
 	height: 300px;
 	margin: auto;
 }
+
+
+input[type=file] {
+	display: none;
+  }
+
+  .image-container{
+	position:relative;
+  }
+  #addPhotoForm i{
+	position:absolute;
+	right:30px;
+	top:20px;
+	font-size: 60px;
+  }
+  .image-container span{
+	position:absolute;
+	background: grey;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 30px;
+	width: 75%;
+
+	margin: auto;
+  }
+  select{
+	width:100%;
+	background-color:#fff;
+	margin-bottom: 20px;
+  }
+  
