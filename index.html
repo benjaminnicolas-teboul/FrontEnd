@@ -19,13 +19,14 @@
 <body>
 	
 	<script type="module" src="./assets/script.js"></script>
-	<header>
+	<header id="main-header">
 		<div id="editionMode">
 		<i class="fa-regular fa-pen-to-square"></i>
 		<p>mode edition</p>
 	</div>
+	<div class="main-container">
 	<div class="infosHeader">
-		<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+		<h1>Sophie Bluel <span>ARCHITECTE D'INTÉRIEUR</span></h1>
 		<nav>
 			<ul>
 				<li>projets</li>
@@ -37,7 +38,7 @@
 	</div>
 	</header>
 	<main>
-		<div class="main-container">
+		
 		<section id="introduction">
 			<figure>
 				<img src="./assets/images/sophie-bluel.png" alt="">
@@ -61,32 +62,37 @@
 			<aside id="modal1" class="modal">
 				<div class="modal-content">
 					<div id="modal-header">
+						<i class="fa-solid fa-arrow-left " id="returnGalleryModale"></i>
 						<span class="js-close">&times;</span>
-						<h1>Galerie photo</h1>
-					</div> 
+					</div>
+					<h1 id="modalTitle">Galerie photo</h1>
 						<div id="gallery-modal">
-						</div>					
+						</div>	
+										
 						<form id="addPhotoForm">
-							<h2>Ajout photo</h2>
-							<div class="image-container">
-							<img id="imagePreview" src="" >
-							<i class="fa-regular fa-image" style="color: #000000;"></i>
-							<input type="file" id="photoInput" accept="image/*">
-							<label for="photoInput">
+							<div class="image-box">
+							  <img id="imagePreview" src="" alt="jpg,png : 4mo max">
+							  <div id="imageElements">
+								
+							  <img id="previewPhotoicon" class="default"  src="assets/images/picture-svgrepo-com.svg" alt="logo svg photo">
+							  <label for="photoInput" class="photo-label">
 								<span>+ Ajouter photo</span>
-								<input type="file" id="photoInput" name="image" accept="image/*"/>
+								<input type="file" id="photoInput" name="image" accept="image/*">
 							  </label>
-							  
-						    </div>
-							<p>Titre</p>
-						
-							<input type="text" name="phototitle" id="photoTitle" placeholder="">
+							  <p>jpg,png : 4mo max</p>
+							</div>
+							</div>
 							
+							<p>Titre</p>
+							<input type="text" name="phototitle" id="photoTitle" placeholder="">
 							<p>Catégories</p>
-						    <select id="photoCategory" name="categoryid"></select>					
+							<select id="photoCategory" name="categoryid"></select>
+							<div id="bordure-partielle"></div>
 							<button id="submitPhotoBtn">Valider</button>
-						</form>
+						  </form>
+						<div id="bordure-partielle-gallery"></div>
 						<button id="add-image">Ajouter une photo</button>
+				</div>
 			</aside>
 
 			<div class="gallery">

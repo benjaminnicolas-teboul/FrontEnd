@@ -7,8 +7,11 @@ import {displayCategories} from "./modulesJs/displayCategories.js";
 import {closeModal} from "./modulesJs/closeModal.js";
 import {submitForm} from "./modulesJs/submitForm.js";
 import {updateLoginState} from "./modulesJs/updateLoginState.js";
+import {previewImg} from "./modulesJs/previewImg.js";
 const galerySection = document.querySelector(".gallery");
 const galeryModale = document.querySelector("#gallery-modal");
+const modalTitle= document.querySelector("#modalTitle");
+const returnGModal = document.getElementById("returnGalleryModale");
 
 filterContainer.classList.add("filter-nav");
 galerySection.parentNode.insertBefore(filterContainer, galerySection);
@@ -19,7 +22,19 @@ const buttonModify = document.querySelector(".buttonModify");
 const closeButton = document.querySelector(".js-close");
 const linkLogin = document.getElementById("login");
  const editMode = document.getElementById("editionMode");
+ const photoInput = document.querySelector("#photoInput");
+const previewImage = document.querySelector("#imagePreview");
+const formAddphotos = document.getElementById("addPhotoForm");
+const addImage = document.getElementById("add-image");
+const imageElements = document.getElementById('imageElements');
+const partialBorderGallery = document.getElementById('bordure-partielle-gallery');
+    const titleInput = document.querySelector("#photoTitle");
+    const categoryValue = document.querySelector("#photoCategory").value;
+    const imageFile = photoInput.files[0];
 
+ photoInput.addEventListener("change", function () {
+  previewImg();
+ });
 
 document.querySelector("#submitPhotoBtn").addEventListener("click", (event) => {
   event.preventDefault();
@@ -44,4 +59,4 @@ if (!sessionStorage.getItem("categories")) {
 }
 
 updateLoginState();
-export{galerySection,filterContainer,linkLogin,buttonModify,editMode,modal,galeryModale};
+export{galerySection,filterContainer,linkLogin,buttonModify,editMode,modal,galeryModale,previewImage,modalTitle,returnGModal,formAddphotos,addImage,imageElements,partialBorderGallery};

@@ -1,7 +1,9 @@
-import{linkLogin,buttonModify,editMode,modal,galeryModale} from "../script.js";
+import{linkLogin,buttonModify,editMode,modal,galeryModale,modalTitle,returnGModal,formAddphotos,addImage,imageElements,previewImage,partialBorderGallery} from "../script.js";
 import {openModal} from "./openModal.js";
 import {closeModal} from "./closeModal.js";
 import {resetSection} from "./resetSection.js"
+import {returnGalleryModal} from "./returnGalleryModal.js"
+
 
 function handleLogout(event) {
   event.preventDefault();
@@ -12,10 +14,10 @@ function handleLogout(event) {
 export const updateLoginState = () => {
   linkLogin.removeEventListener("click", handleLogout);
     if (sessionStorage.getItem("token")) {
-      const addImage = document.getElementById("add-image");
+      
       linkLogin.textContent = "Logout";
       linkLogin.href = "#";
-      editMode.style.display = "block";
+      editMode.style.display = "flex";
       buttonModify.addEventListener("click", openModal);
       window.addEventListener("click", (event) => {
         if (event.target === modal) {
@@ -24,9 +26,11 @@ export const updateLoginState = () => {
       });
       linkLogin.addEventListener("click", handleLogout);
       addImage.addEventListener("click", (event) => {
+        partialBorderGallery.style.display = "none";
+        galeryModale.style.display = "none";
+        modalTitle.innerHTML = "Ajout photo"
         event.preventDefault();
-        const formAddphotos = document.getElementById("addPhotoForm");
-        const headModal = document.getElementById("modal-header");
+        imageElements.style.display = "flex";
         const categoryArray = JSON.parse(sessionStorage.getItem("categories"));
         const categoriesSelectElement = document.getElementById("photoCategory");
         if (categoriesSelectElement.options.length === 0) {
@@ -44,13 +48,17 @@ export const updateLoginState = () => {
         formAddphotos.style.display = "block";
         addImage.style.display = "none";
         resetSection(galeryModale);
-        headModal.style.display = "none";
+        returnGModal.style.display = "block";
+        returnGModal.addEventListener("click",returnGalleryModal);
+    
+         
       });
     } else {
       linkLogin.textContent = "Login";
       linkLogin.href = "login.html";
       buttonModify.style.display = "none";
       buttonModify.removeEventListener("click", openModal);
+      returnGModal.removeEventListener("click",returnGalleryModal);
       editMode.style.display = "none";
       resetSection(galeryModale);
     }

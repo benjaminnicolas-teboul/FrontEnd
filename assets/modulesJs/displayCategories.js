@@ -5,7 +5,7 @@ import {eventButtons} from "./eventButtons.js";
 export const displayCategories = (data) => {
     const AllButtonHTML = `
           <button class="filter-btn active" data-category="all">
-            tous
+            Tous
           </button>
         `;
     filterContainer.insertAdjacentHTML("beforeend", AllButtonHTML);
