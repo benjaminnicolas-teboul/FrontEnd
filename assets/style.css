@@ -488,7 +488,6 @@ justify-content: space-between;
 #gallery-modal {
   display: grid;
   grid-template-columns: 18% 18% 18% 18% 18%;
-  grid-template-rows: 30% 30% 30%;
   gap: 12px;
   padding: 30px 85px;
   margin: 25px auto 39px;
