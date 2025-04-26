@@ -266,6 +266,7 @@ a {
   height: 37px;
   font-weight: bold;
   font-size: 17px;
+  font-family: Work Sans;
 }
 .active {
   color: #fffef8;
@@ -555,7 +556,7 @@ justify-content: space-between;
 }
 
 #previewPhotoicon {
-  height: 85px;   
+  height: 78px;   
   width: auto; 
 }
 
@@ -578,11 +579,11 @@ input[type="text"] {
 .image-box span {
   
   background:#B9C5CC;
-  color: #fff;
+  color: #151B54;
   cursor: pointer;
   border-radius:30px;
   width: 147px;
-  padding: 14px 18px 7px 22px;
+  padding: 13px 18px 11px 22px;
   height: 27px;
 }
 select {
@@ -617,7 +618,7 @@ select {
 .image-box p{
   color:#444444;
   font-size:10px ;
-  margin: -7px auto 16px;
+  margin: 0px auto 16px;
 }
 
 #imagePreview {
@@ -626,4 +627,10 @@ select {
   margin:auto;
   max-height: 169px;
   display: none;
+}
+.modal-content #modalTitle{
+  color: #000;
+  padding-top: 30px;
+  margin-bottom: 0.1em;
+  font-family: Work sANS;
 }
