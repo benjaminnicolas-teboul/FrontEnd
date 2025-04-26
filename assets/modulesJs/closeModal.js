@@ -1,5 +1,6 @@
 import{modal,galeryModale,previewImage,partialBorderGallery,returnGModal} from "../script.js";
 import{resetSection} from "./resetSection.js";
+import{updateButtonColor} from "./updateButtonColor.js";
 import {modalTitle} from "../script.js"
 export const closeModal = () => {
   const photoInput = document.querySelector("#photoInput");
@@ -19,4 +20,5 @@ export const closeModal = () => {
     photoInput.value="";
     titleInput.value="";
     document.querySelector("#photoCategory").value = "";
+    updateButtonColor();
   };
