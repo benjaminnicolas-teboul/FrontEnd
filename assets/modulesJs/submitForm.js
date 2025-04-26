@@ -1,6 +1,6 @@
 import {closeModal} from "./closeModal.js";
 import {fetchWorks} from "./fetchWorks.js";
-
+import{} from "../script.js";
 
 export async function submitForm() {
    const formData = new FormData();
@@ -22,6 +22,7 @@ export async function submitForm() {
       alert("Veuillez sélectionner une image et entrer un titre.");
       return;
     }
+    
     formData.append("image", imageFile); 
     formData.append("title", titleValue); 
     formData.append("category", Number(categoryValue));
@@ -57,7 +58,8 @@ export async function submitForm() {
       document.querySelector("#photoCategory").value = "";
       closeModal();
       fetchWorks();
-      
+      const button = document.getElementById("submitPhotoBtn");
+      button.style.backgroundColor = "#a0a0a0";
     } catch (error) {
       console.error("Échec de la requête :", error);
       alert(`Erreur : ${error.message}`);

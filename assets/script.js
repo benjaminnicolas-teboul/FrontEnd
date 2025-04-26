@@ -8,14 +8,12 @@ import {closeModal} from "./modulesJs/closeModal.js";
 import {submitForm} from "./modulesJs/submitForm.js";
 import {updateLoginState} from "./modulesJs/updateLoginState.js";
 import {previewImg} from "./modulesJs/previewImg.js";
+import {updateButtonColor} from "./modulesJs/updateButtonColor.js";
+
 const galerySection = document.querySelector(".gallery");
 const galeryModale = document.querySelector("#gallery-modal");
 const modalTitle= document.querySelector("#modalTitle");
 const returnGModal = document.getElementById("returnGalleryModale");
-
-
-
-
 const modal = document.getElementById("modal1");
 const buttonModify = document.querySelector(".buttonModify");
 const closeButton = document.querySelector(".js-close");
@@ -37,6 +35,7 @@ galerySection.parentNode.insertBefore(filterContainer, galerySection);
  });
 
 document.querySelector("#submitPhotoBtn").addEventListener("click", (event) => {
+  formAddphotos.addEventListener('input',updateButtonColor);
   event.preventDefault();
   submitForm();
 });

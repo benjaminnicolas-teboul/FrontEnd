@@ -50,8 +50,6 @@ export const updateLoginState = () => {
         resetSection(galeryModale);
         returnGModal.style.display = "block";
         returnGModal.addEventListener("click",returnGalleryModal);
-    
-         
       });
     } else {
       document.querySelector(".filter-nav").style.display = "flex";
