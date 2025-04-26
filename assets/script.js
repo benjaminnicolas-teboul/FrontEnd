@@ -13,8 +13,7 @@ const galeryModale = document.querySelector("#gallery-modal");
 const modalTitle= document.querySelector("#modalTitle");
 const returnGModal = document.getElementById("returnGalleryModale");
 
-filterContainer.classList.add("filter-nav");
-galerySection.parentNode.insertBefore(filterContainer, galerySection);
+
 
 
 const modal = document.getElementById("modal1");
@@ -28,9 +27,10 @@ const formAddphotos = document.getElementById("addPhotoForm");
 const addImage = document.getElementById("add-image");
 const imageElements = document.getElementById('imageElements');
 const partialBorderGallery = document.getElementById('bordure-partielle-gallery');
-    const titleInput = document.querySelector("#photoTitle");
-    const categoryValue = document.querySelector("#photoCategory").value;
-    const imageFile = photoInput.files[0];
+
+    
+filterContainer.classList.add("filter-nav");
+galerySection.parentNode.insertBefore(filterContainer, galerySection);
 
  photoInput.addEventListener("change", function () {
   previewImg();

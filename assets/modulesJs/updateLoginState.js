@@ -1,4 +1,4 @@
-import{linkLogin,buttonModify,editMode,modal,galeryModale,modalTitle,returnGModal,formAddphotos,addImage,imageElements,previewImage,partialBorderGallery} from "../script.js";
+import{linkLogin,buttonModify,editMode,modal,galeryModale,modalTitle,returnGModal,formAddphotos,addImage,imageElements,partialBorderGallery} from "../script.js";
 import {openModal} from "./openModal.js";
 import {closeModal} from "./closeModal.js";
 import {resetSection} from "./resetSection.js"
@@ -14,7 +14,7 @@ function handleLogout(event) {
 export const updateLoginState = () => {
   linkLogin.removeEventListener("click", handleLogout);
     if (sessionStorage.getItem("token")) {
-      
+      document.querySelector(".filter-nav").style.display = "none";
       linkLogin.textContent = "Logout";
       linkLogin.href = "#";
       editMode.style.display = "flex";
@@ -54,6 +54,7 @@ export const updateLoginState = () => {
          
       });
     } else {
+      document.querySelector(".filter-nav").style.display = "flex";
       linkLogin.textContent = "Login";
       linkLogin.href = "login.html";
       buttonModify.style.display = "none";
