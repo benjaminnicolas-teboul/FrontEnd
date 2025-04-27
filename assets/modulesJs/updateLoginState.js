@@ -3,7 +3,7 @@ import {openModal} from "./openModal.js";
 import {closeModal} from "./closeModal.js";
 import {resetSection} from "./resetSection.js"
 import {returnGalleryModal} from "./returnGalleryModal.js"
-
+import {updateButtonColor} from "./updateButtonColor.js"
 
 function handleLogout(event) {
   event.preventDefault();
@@ -26,6 +26,7 @@ export const updateLoginState = () => {
       });
       linkLogin.addEventListener("click", handleLogout);
       addImage.addEventListener("click", (event) => {
+        updateButtonColor();
         partialBorderGallery.style.display = "none";
         galeryModale.style.display = "none";
         modalTitle.innerHTML = "Ajout photo"
@@ -47,7 +48,7 @@ export const updateLoginState = () => {
         returnGModal.style.display = "block";
         returnGModal.addEventListener("click",returnGalleryModal);
       });
-    } else {
+    } else {  
       document.querySelector(".filter-nav").style.display = "flex";
       linkLogin.textContent = "Login";
       linkLogin.href = "login.html";

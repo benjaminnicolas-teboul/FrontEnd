@@ -19,5 +19,5 @@ export const returnGalleryModal = () =>{
     photoInput.value="";
     titleInput.value="";
     document.querySelector("#photoCategory").value = "";
-    
+   
 }

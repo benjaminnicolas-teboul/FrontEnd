@@ -2,7 +2,7 @@ import {closeModal} from "./closeModal.js";
 import {fetchWorks} from "./fetchWorks.js";
 import{} from "../script.js";
 
-export async function submitForm() {
+export const submitForm = async  () =>{
    const formData = new FormData();
     const photoInput = document.querySelector("#photoInput");
     const titleInput = document.querySelector("#photoTitle");

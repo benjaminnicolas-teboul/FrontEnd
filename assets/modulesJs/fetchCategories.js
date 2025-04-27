@@ -1,6 +1,6 @@
 import {displayCategories} from "./displayCategories.js";
 
-export const fetchCategories = () => {
+export const fetchCategories = async () => {
   return fetch("http://localhost:5678/api/categories")
     .then((response) => {
       if (!response.ok) {

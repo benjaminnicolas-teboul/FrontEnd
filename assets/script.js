@@ -34,7 +34,7 @@ galerySection.parentNode.insertBefore(filterContainer, galerySection);
   previewImg();
  });
  formAddphotos.addEventListener('input',updateButtonColor);
- 
+
 document.querySelector("#submitPhotoBtn").addEventListener("click", (event) => {
   event.preventDefault();
   submitForm();
@@ -43,7 +43,6 @@ document.querySelector("#submitPhotoBtn").addEventListener("click", (event) => {
 closeButton.addEventListener("click", closeModal);
 
 if (!sessionStorage.getItem("works")) {
-  
   fetchWorks();
 } else {
   const worksArray = JSON.parse(sessionStorage.getItem("works"));

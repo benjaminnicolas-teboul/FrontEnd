@@ -1,6 +1,6 @@
 import {displayGallery} from "./displayGallery.js";
 
-export const fetchWorks = () => {
+export const fetchWorks = async () => {
     return fetch("http://localhost:5678/api/works")
       .then((response) => {
         if (!response.ok) {
