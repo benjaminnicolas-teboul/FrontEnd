@@ -195,6 +195,7 @@ nav li {
   display: flex;
   justify-content: space-between;
   margin:35px 0;
+  padding: 30px;
 }
 .infosHeader  img{
   width: 18px;
