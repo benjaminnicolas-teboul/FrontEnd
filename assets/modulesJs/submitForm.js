@@ -27,7 +27,7 @@ export const submitForm = async  () =>{
     formData.append("title", titleValue); 
     formData.append("category", Number(categoryValue));
     try {
-      let token = sessionStorage.getItem("token");
+      let token = localStorage.getItem("token");
       token = JSON.parse(token);
       token = token.token;
    

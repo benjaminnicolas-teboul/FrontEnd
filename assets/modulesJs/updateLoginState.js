@@ -7,13 +7,13 @@ import {updateButtonColor} from "./updateButtonColor.js"
 
 function handleLogout(event) {
   event.preventDefault();
-  sessionStorage.removeItem("token");
+  localStorage.removeItem("token");
   updateLoginState();
 }
 
 export const updateLoginState = () => {
   linkLogin.removeEventListener("click", handleLogout);
-    if (sessionStorage.getItem("token")) {
+    if (localStorage.getItem("token")) {
       document.querySelector(".filter-nav").style.display = "none";
       linkLogin.textContent = "Logout";
       linkLogin.href = "#";

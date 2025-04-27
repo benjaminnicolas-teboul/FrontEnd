@@ -1,7 +1,7 @@
 import {fetchWorks} from "./fetchWorks.js";
 import {closeModal} from "./closeModal.js";
 export const deleteWork = async (id) => {
-    const storedToken = sessionStorage.getItem("token");
+    const storedToken = localStorage.getItem("token");
     const parsedToken = JSON.parse(storedToken);
     const jwt = parsedToken.token;
     try {

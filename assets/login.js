@@ -1,6 +1,6 @@
-const tokenData = sessionStorage.getItem("token");
+const tokenData = localStorage.getItem("token");
 if(tokenData){
-  document.location.href = "../index.html";
+  window.location.href = "./index.html";
 }
 
 const fetchLogins = async (email, password) => {
@@ -25,9 +25,9 @@ const fetchLogins = async (email, password) => {
       return response.json();
     })
     .then((data) => {
-      sessionStorage.setItem("token", JSON.stringify(data));
+      localStorage.setItem("token", JSON.stringify(data));
       console.log("Connexion réussie");
-      document.location.href = "../index.html";
+      window.location.href = "./index.html";
       return data;
     })
     .catch((error) => {
