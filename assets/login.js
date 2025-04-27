@@ -1,4 +1,9 @@
-const fetchLogins = (email, password) => {
+const tokenData = sessionStorage.getItem("token");
+if(tokenData){
+  document.location.href = "../index.html";
+}
+
+const fetchLogins = async (email, password) => {
   const userData = {
     email,
     password,
