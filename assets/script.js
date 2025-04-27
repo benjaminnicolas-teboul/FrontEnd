@@ -34,8 +34,8 @@ galerySection.parentNode.insertBefore(filterContainer, galerySection);
   previewImg();
  });
  formAddphotos.addEventListener('input',updateButtonColor);
+ 
 document.querySelector("#submitPhotoBtn").addEventListener("click", (event) => {
-  
   event.preventDefault();
   submitForm();
 });

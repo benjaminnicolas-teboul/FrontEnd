@@ -33,11 +33,7 @@ export const updateLoginState = () => {
         imageElements.style.display = "flex";
         const categoryArray = JSON.parse(sessionStorage.getItem("categories"));
         const categoriesSelectElement = document.getElementById("photoCategory");
-        if (categoriesSelectElement.options.length === 0) {
-          var emptyOption = document.createElement("option");
-          emptyOption.value = "";
-          emptyOption.text = ""; 
-          categoriesSelectElement.append(emptyOption);
+        if (categoriesSelectElement.options.length === 1) {
           categoryArray.forEach((item) => {
             var option = document.createElement("option");
             option.value = item.id;
